@@ -2,6 +2,7 @@ import { indieFlower, inter } from '@/utils/fonts'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import './globals.css'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
 	title: 'Andrea Benato',
@@ -14,13 +15,16 @@ export default function RootLayout({
 	children: ReactNode
 }>) {
 	return (
-		<html
-			lang="en"
-			className={`${inter.variable} ${indieFlower.variable}`}
-		>
-			<body className="antialiased bg-background text-text">
-				{children}
-			</body>
-		</html>
+		<>
+			{process.env.NODE_ENV !== 'development' && <SpeedInsights />}
+			<html
+				lang="en"
+				className={`${inter.variable} ${indieFlower.variable}`}
+			>
+				<body className="antialiased bg-background text-text">
+					{children}
+				</body>
+			</html>
+		</>
 	)
 }
