@@ -1,4 +1,6 @@
 /** @type {import('prettier').Config} */
+import tailwind from 'prettier-plugin-tailwindcss'
+
 const config = {
 	arrowParens: 'avoid',
 	bracketSameLine: false,
@@ -17,7 +19,8 @@ const config = {
 	requirePragma: false,
 	tabWidth: 4,
 	useTabs: true,
-	embeddedLanguageFormatting: 'auto'
+	embeddedLanguageFormatting: 'auto',
+	plugins: [tailwind]
 }
 
 export default config

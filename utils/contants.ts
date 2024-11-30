@@ -28,7 +28,7 @@ export const socials: Record<
 	x: {
 		link: 'https://x.com/aabeborn',
 		icon: NewTwitterIcon,
-		name: 'x'
+		name: 'X'
 	},
 	instagram: {
 		link: 'https://www.instagram.com/aabeborn/',

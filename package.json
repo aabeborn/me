@@ -13,20 +13,21 @@
 	"dependencies": {
 		"@vercel/speed-insights": "^1.1.0",
 		"hugeicons-react": "^0.3.0",
-		"next": "^15.0.4-canary.30",
-		"react": "^19.0.0-rc-7670501b-20241124",
-		"react-dom": "^19.0.0-rc-7670501b-20241124"
+		"next": "^15.0.4-canary.32",
+		"prettier-plugin-tailwindcss": "^0.6.9",
+		"react": "^19.0.0-rc-fb9a90fa48-20240614",
+		"react-dom": "^19.0.0-rc-fb9a90fa48-20240614"
 	},
 	"devDependencies": {
-		"@tailwindcss/postcss": "^4.0.0-beta.3",
-		"@types/node": "^20",
-		"@types/react": "^18",
-		"@types/react-dom": "^18",
+		"@tailwindcss/postcss": "^4.0.0-beta.4",
+		"@types/node": "^20.17.9",
+		"@types/react": "^18.3.12",
+		"@types/react-dom": "^18.3.1",
 		"@typescript-eslint/eslint-plugin": "^8.16.0",
 		"@typescript-eslint/parser": "^8.16.0",
 		"@vitest/eslint-plugin": "^1.1.12",
 		"babel-plugin-react-compiler": "^19.0.0-beta-df7b47d-20241124",
-		"eslint": "^8",
+		"eslint": "^8.57.1",
 		"eslint-config-next": "15.0.3",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-import": "^2.31.0",
@@ -35,10 +36,10 @@
 		"eslint-plugin-react-compiler": "^19.0.0-beta-df7b47d-20241124",
 		"eslint-plugin-unicorn": "^56.0.1",
 		"eslint-plugin-unused-imports": "^4.1.4",
-		"postcss": "^8",
+		"postcss": "^8.4.49",
 		"prettier": "^3.4.1",
-		"tailwindcss": "^4.0.0-beta.3",
-		"typescript": "^5",
+		"tailwindcss": "^4.0.0-beta.4",
+		"typescript": "^5.7.2",
 		"vitest": "^2.1.6"
 	}
 }
