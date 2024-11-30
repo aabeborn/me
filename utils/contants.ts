@@ -16,7 +16,7 @@ export const socials: Record<
 	}
 > = {
 	linkedin: {
-		link: 'https://www.linkedin.com/in/andreabenato/',
+		link: 'https://www.linkedin.com/in/benato-andrea',
 		icon: Linkedin01Icon,
 		name: 'LinkedIn'
 	},
