@@ -17,6 +17,7 @@
 	/* --color-dark-background: #2f3132; */
 	/* --color-dark-background: #282a2b; */
 	--color-dark-background: #1c1e1f;
+	--color-dark-background-darker: #343738;
 
 	--color-dark-primary: var(--color-orange-400);
 	--color-dark-primary-light: var(--color-orange-500);
