@@ -1,5 +1,5 @@
 'use client'
-import { Provider } from '@/context/colorSchema'
+import { Provider } from '@/context/color-schema'
 import { useState, type ReactNode } from 'react'
 import type { ColorSchema } from '@/utils/types'
 

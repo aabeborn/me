@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import './globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { ColorSchemaProvider } from '@/components/colorSchemaProvider'
+import { ColorSchemaProvider } from '@/components/color-schema'
 
 export const metadata: Metadata = {
 	title: 'Andrea Benato',
