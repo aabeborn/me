@@ -11,8 +11,8 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
-		"@radix-ui/react-icons": "^1.3.2",
 		"@vercel/speed-insights": "^1.1.0",
+		"hugeicons-react": "^0.3.0",
 		"next": "^15.0.4-canary.30",
 		"react": "^19.0.0-rc-7670501b-20241124",
 		"react-dom": "^19.0.0-rc-7670501b-20241124"
