@@ -2,19 +2,18 @@ import {
 	Linkedin01Icon,
 	GithubIcon,
 	NewTwitterIcon,
-	InstagramIcon,
-	type HugeiconsProps
+	InstagramIcon
 } from 'hugeicons-react'
-import type { FC } from 'react'
+import DeltatreLogo from '@/components/deltatre-logo'
+import { type Link } from './types'
 
-export const socials: Record<
-	string,
-	{
-		link: string
-		icon: FC<HugeiconsProps>
-		name: string
-	}
-> = {
+export const work: Link = {
+	name: 'Deltatre',
+	link: 'https://www.deltatre.com/',
+	icon: DeltatreLogo
+}
+
+export const socials: Record<string, Link> = {
 	linkedin: {
 		link: 'https://www.linkedin.com/in/benato-andrea',
 		icon: Linkedin01Icon,

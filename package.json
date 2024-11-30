@@ -11,9 +11,11 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
+		"@sanity/image-url": "^1.1.0",
 		"@vercel/speed-insights": "^1.1.0",
 		"hugeicons-react": "^0.3.0",
 		"next": "^15.0.4-canary.32",
+		"next-sanity": "^9.8.20",
 		"prettier-plugin-tailwindcss": "^0.6.9",
 		"react": "^19.0.0-rc-fb9a90fa48-20240614",
 		"react-dom": "^19.0.0-rc-fb9a90fa48-20240614"

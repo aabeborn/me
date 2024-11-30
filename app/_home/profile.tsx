@@ -1,5 +1,7 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import Socials from './socials'
+import { work } from '@/utils/contants'
 
 const Profile = () => {
 	return (
@@ -12,14 +14,22 @@ const Profile = () => {
 				alt="Andrea Benato"
 				quality={100}
 			/>
-			<div className="flex flex-col gap-4 grow">
-				<span className="dark:text-white font-display font-regular text-text">
+			<div className="flex flex-col gap-4 grow ">
+				<span className="dark:text-white font-display font-regular text-text end">
 					Ciao! I&apos;m{' '}
 					<span className="font-accent font-bold text-lg leading-1 hover:text-orange-400 dark:hover:text-primary-light">
 						Andrea
 					</span>
-					, a frontend developer currently working as Frontend Tech
-					and Team leader at Deltatre in Italy
+					, a frontend developer from Italy, currently working as
+					Frontend Tech and Team leader at{' '}
+					<Link
+						className="flex justify-center md:justify-start items-end gap-1 font-bold px-2 pt-4"
+						href={work.link}
+					>
+						{work.icon({
+							className: 'h-4 fill-white'
+						})}
+					</Link>
 				</span>
 				<div className="inline-flex justify-center gap-6 md:justify-start">
 					<Socials />
