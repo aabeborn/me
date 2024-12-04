@@ -1,0 +1,32 @@
+{
+	"name": "me",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"format": "prettier --write ."
+	},
+	"dependencies": {
+		"@vercel/speed-insights": "^1.1.0",
+		"hugeicons-react": "^0.3.0",
+		"next": "^15.0.4-canary.32",
+		"react": "^19.0.0-rc-fb9a90fa48-20240614",
+		"react-dom": "^19.0.0-rc-fb9a90fa48-20240614"
+	},
+	"devDependencies": {
+		"@tailwindcss/postcss": "^4.0.0-beta.4",
+		"@types/node": "^20.17.9",
+		"@types/react": "^18.3.12",
+		"@types/react-dom": "^18.3.1",
+		"@vitest/eslint-plugin": "^1.1.12",
+		"babel-plugin-react-compiler": "^19.0.0-beta-df7b47d-20241124",
+		"postcss": "^8.4.49",
+		"tailwindcss": "^4.0.0-beta.4",
+		"typescript": "^5.7.2",
+		"vitest": "^2.1.6"
+	}
+}
