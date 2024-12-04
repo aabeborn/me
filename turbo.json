@@ -1,4 +1,11 @@
 {
-	"$schema": "https://turbo.build/schema.json",
-	"tasks": {}
+  "$schema": "https://turbo.build/schema.json",
+  "globalEnv": ["NODE_ENV"],
+  "tasks": {
+    "lint": { "cache": false },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
 }
