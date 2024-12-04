@@ -3,11 +3,11 @@ import { Provider } from '@/context/color-schema'
 import { useState, type ReactNode } from 'react'
 import type { ColorSchema } from '@/utils/types'
 
-interface Props {
-	children: ReactNode
+interface Properties {
+	readonly children: ReactNode
 }
 
-export const ColorSchemaProvider = ({ children }: Props) => {
+export function ColorSchemaProvider({ children }: Properties) {
 	const [schema, setSchema] = useState<ColorSchema>()
 	return (
 		<div className={schema}>

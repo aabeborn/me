@@ -13,13 +13,13 @@ const context = createContext<{
 } | null>(null)
 
 const useColorSchema = () => {
-	const ctx = useContext(context)
-	if (!ctx) {
+	const context_ = useContext(context)
+	if (!context_) {
 		throw new Error(
 			'useColorSchema must be used within a ColorSchemaProvider'
 		)
 	}
-	return ctx
+	return context_
 }
 
 const { Provider } = context
