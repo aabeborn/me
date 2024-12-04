@@ -1,0 +1,24 @@
+{
+	"name": "@aabeborn/eslint-config",
+	"type": "module",
+	"private": true,
+	"exports": {
+		"./base": "./base.js",
+		"./next": "./next.js",
+		"./react": "./react.js"
+	},
+	"devDependencies": {
+		"@next/eslint-plugin-next": "^15.0.4-canary.41",
+		"@typescript-eslint/eslint-plugin": "^8.17.0",
+		"eslint": "^9.16.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"eslint-plugin-react": "^7.37.2",
+		"eslint-plugin-react-compiler": "^19.0.0-beta-df7b47d-20241124",
+		"eslint-plugin-react-hooks": "^5.0.0",
+		"eslint-plugin-turbo": "^2.3.3",
+		"eslint-plugin-unicorn": "^56.0.1",
+		"typescript": "^5.7.2",
+		"typescript-eslint": "^8.17.0"
+	}
+}
