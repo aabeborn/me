@@ -8,12 +8,21 @@
 			"persistent": true
 		},
 		"dev#@aabeborn/studio": {
-			"env": ["VITE_SANITY_PROJECT_ID", "VITE_SANITY_DATASET"]
+			"env": ["SANITY_STUDIO_PROJECT_ID", "SANITY_STUDIO_DATASET"]
 		},
 		"build": {
+			"inputs": ["$TURBO_DEFAULT$", ".env*"]
+		},
+		"build#@aabeborn/ui": {
 			"dependsOn": ["^build"],
 			"inputs": ["$TURBO_DEFAULT$", ".env*"],
 			"outputs": [".next/**", "!.next/cache/**"]
+		},
+		"build#@aabeborn/studio": {
+			"env": ["SANITY_STUDIO_PROJECT_ID", "SANITY_STUDIO_DATASET"],
+			"inputs": ["$TURBO_DEFAULT$", ".env*"],
+			"dependsOn": ["^build"],
+			"outputs": ["dist/**"]
 		},
 		"lint": {
 			"dependsOn": ["^lint"]

@@ -9,7 +9,7 @@ if (
 	!import.meta.env.SANITY_STUDIO_DATASET
 )
 	throw new Error(
-		'Missing SANITY_STUDIO_PROJECT_ID or SANITY_STUDIO_STUDIO_DATASET in environment'
+		'Missing SANITY_STUDIO_PROJECT_ID or SANITY_STUDIO_DATASET in environment'
 	)
 
 export default defineConfig({
