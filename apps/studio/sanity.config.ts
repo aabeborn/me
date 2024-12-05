@@ -3,9 +3,11 @@ import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemaTypes'
 import { markdownSchema } from 'sanity-plugin-markdown'
-console.log(import.meta)
+
 if (
+	// @ts-ignore - it is correct. Vite injects these values at build time
 	!import.meta.env.SANITY_STUDIO_PROJECT_ID ||
+	// @ts-ignore - it is correct. Vite injects these values at build time
 	!import.meta.env.SANITY_STUDIO_DATASET
 )
 	throw new Error(
@@ -15,10 +17,11 @@ if (
 export default defineConfig({
 	name: 'studio',
 	title: 'aabeborn - Studio',
-
+	// @ts-ignore - it is correct. Vite injects these values at build time
 	projectId: import.meta.env.SANITY_STUDIO_PROJECT_ID,
+	// @ts-ignore - it is correct. Vite injects these values at build time
 	dataset: import.meta.env.SANITY_STUDIO_DATASET,
-
+	// @ts-ignore - there is an error about visionTool, something not caused by me
 	plugins: [structureTool(), visionTool(), markdownSchema()],
 
 	schema: {

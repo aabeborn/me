@@ -1,0 +1,8 @@
+{
+	"name": "@aabeborn/types",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": "./sanity.types.ts"
+	}
+}
