@@ -18,7 +18,7 @@ function Profile() {
 			<div className="flex grow flex-col gap-4">
 				<span className="font-display font-regular text-text end dark:text-white">
 					Ciao! I&apos;m{' '}
-					<span className="font-accent dark:hover:text-primary-light text-lg leading-1 font-bold hover:text-orange-400">
+					<span className="font-accent dark:hover:text-primary-light eading-1 text-lg font-bold hover:text-orange-400">
 						Andrea
 					</span>
 					, a frontend developer from Italy, currently working as

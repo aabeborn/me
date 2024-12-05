@@ -1,20 +1,16 @@
 {
-  "name": "aabeborn",
-  "private": true,
-  "type": "module",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "packageManager": "bun@1.1.38",
-  "scripts": {
-    "format": "prettier --write .",
-    "lint": "turbo run lint",
-    "dev:ui": "turbo run @aabeborn/ui#dev"
-  },
-  "devDependencies": {
-    "@aabeborn/prettier-config": "workspace:*",
-    "turbo": "^2.3.3",
-    "typescript": "^5.7.2"
-  }
+	"name": "aabeborn",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"format": "prettier --write .",
+		"lint": "turbo run lint",
+		"dev:ui": "turbo run @aabeborn/ui#dev"
+	},
+	"packageManager": "pnpm@9.14.4",
+	"devDependencies": {
+		"@aabeborn/prettier-config": "workspace:*",
+		"turbo": "^2.3.3",
+		"typescript": "^5.7.2"
+	}
 }
