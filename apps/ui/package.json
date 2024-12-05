@@ -13,9 +13,9 @@
 	"dependencies": {
 		"@vercel/speed-insights": "^1.1.0",
 		"hugeicons-react": "^0.3.0",
-		"next": "^15.0.4-canary.41",
-		"react": "^19.0.0-rc-de68d2f4-20241204",
-		"react-dom": "^19.0.0-rc-de68d2f4-20241204"
+		"next": "^15.0.4-canary.42",
+		"react": "^19.0.0-rc-1c9b1387-20241204",
+		"react-dom": "^19.0.0-rc-1c9b1387-20241204"
 	},
 	"devDependencies": {
 		"@aabeborn/eslint-config": "workspace:*",
