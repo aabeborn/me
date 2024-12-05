@@ -1,6 +1,11 @@
 {
 	"$schema": "https://turbo.build/schema.json",
 	"globalEnv": ["NODE_ENV"],
+	"globalPassThroughEnv": [
+		"SANITY_STUDIO_PROJECT_ID",
+		"SANITY_STUDIO_DATASET"
+	],
+	"globalDependencies": [".env*"],
 	"ui": "tui",
 	"tasks": {
 		"dev": {
@@ -11,7 +16,9 @@
 			"env": ["SANITY_STUDIO_PROJECT_ID", "SANITY_STUDIO_DATASET"]
 		},
 		"build": {
-			"inputs": ["$TURBO_DEFAULT$", ".env*"]
+			"dependsOn": ["^build"],
+			"inputs": ["$TURBO_DEFAULT$", ".env*"],
+			"outputs": ["dist/**"]
 		},
 		"build#@aabeborn/ui": {
 			"dependsOn": ["^build"],
