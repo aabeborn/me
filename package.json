@@ -5,7 +5,8 @@
 	"scripts": {
 		"format": "prettier --write .",
 		"lint": "turbo run lint",
-		"dev:ui": "turbo run @aabeborn/ui#dev"
+		"dev:ui": "turbo run @aabeborn/ui#dev",
+		"dev:studio": "turbo run @aabeborn/studio#dev"
 	},
 	"packageManager": "pnpm@9.14.4",
 	"devDependencies": {
