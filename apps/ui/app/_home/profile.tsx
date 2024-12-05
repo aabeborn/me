@@ -26,6 +26,7 @@ function Profile() {
 					<Link
 						className="flex items-end justify-center gap-1 px-2 pt-4 font-bold md:justify-start"
 						href={work.link}
+						aria-label={work.name}
 					>
 						{work.icon({
 							className: 'h-4 fill-white'
