@@ -32,3 +32,10 @@ export const postType = defineType({
 		})
 	]
 })
+
+export const postsType = defineType({
+	name: 'posts',
+	title: 'Posts',
+	type: 'array',
+	of: [{ type: 'post' }]
+})

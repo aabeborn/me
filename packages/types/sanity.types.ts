@@ -68,6 +68,47 @@ export type Geopoint = {
 	alt?: number
 }
 
+export type Socials = Array<{
+	name?: string
+	slug?: Slug
+	url?: string
+	icon?: IconManager
+	_type: 'social'
+	_key: string
+}>
+
+export type Social = {
+	_id: string
+	_type: 'social'
+	_createdAt: string
+	_updatedAt: string
+	_rev: string
+	name?: string
+	slug?: Slug
+	url?: string
+	icon?: IconManager
+}
+
+export type Posts = Array<{
+	title?: string
+	slug?: Slug
+	publishedAt?: string
+	image?: {
+		asset?: {
+			_ref: string
+			_type: 'reference'
+			_weak?: boolean
+			[internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+		}
+		hotspot?: SanityImageHotspot
+		crop?: SanityImageCrop
+		_type: 'image'
+	}
+	body?: string
+	_type: 'post'
+	_key: string
+}>
+
 export type Post = {
 	_id: string
 	_type: 'post'
@@ -154,6 +195,62 @@ export type Slug = {
 	source?: string
 }
 
+export type IconManager = {
+	_type: 'icon.manager'
+	icon?: string
+	metadata?: IconManagerMetadata
+}
+
+export type IconManagerMetadata = {
+	_type: 'icon.manager.metadata'
+	downloadUrl?: string
+	url?: string
+	inlineSvg?: string
+	collectionId?: string
+	collectionName?: string
+	iconName?: string
+	palette?: boolean
+	license?: IconManagerLicense
+	author?: IconManagerAuthor
+	size?: IconManagerSize
+	hFlip?: boolean
+	vFlip?: boolean
+	rotate?: number
+	color?: IconManagerColor
+}
+
+export type IconManagerLicense = {
+	_type: 'icon.manager.license'
+	name?: string
+	url?: string
+}
+
+export type IconManagerAuthor = {
+	_type: 'icon.manager.author'
+	name?: string
+	url?: string
+}
+
+export type IconManagerSize = {
+	_type: 'icon.manager.size'
+	width?: number
+	height?: number
+}
+
+export type IconManagerColor = {
+	_type: 'icon.manager.color'
+	hex?: string
+	rgba?: IconManagerColorRgba
+}
+
+export type IconManagerColorRgba = {
+	_type: 'icon.manager.color.rgba'
+	r?: number
+	g?: number
+	b?: number
+	a?: number
+}
+
 export type Markdown = string
 
 export type AllSanitySchemaTypes =
@@ -162,6 +259,9 @@ export type AllSanitySchemaTypes =
 	| SanityImageDimensions
 	| SanityFileAsset
 	| Geopoint
+	| Socials
+	| Social
+	| Posts
 	| Post
 	| SanityImageCrop
 	| SanityImageHotspot
@@ -169,5 +269,12 @@ export type AllSanitySchemaTypes =
 	| SanityAssetSourceData
 	| SanityImageMetadata
 	| Slug
+	| IconManager
+	| IconManagerMetadata
+	| IconManagerLicense
+	| IconManagerAuthor
+	| IconManagerSize
+	| IconManagerColor
+	| IconManagerColorRgba
 	| Markdown
 export declare const internalGroqTypeReferenceTo: unique symbol

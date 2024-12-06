@@ -5,8 +5,10 @@
 	"scripts": {
 		"format": "prettier --write .",
 		"lint": "turbo run lint",
+		"dev": "turbo run dev",
 		"dev:ui": "turbo run @aabeborn/ui#dev",
-		"dev:studio": "turbo run @aabeborn/studio#dev"
+		"dev:studio": "turbo run @aabeborn/studio#dev",
+		"build": "turbo run build"
 	},
 	"packageManager": "pnpm@9.14.4",
 	"devDependencies": {
