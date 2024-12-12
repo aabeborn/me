@@ -1,27 +1,23 @@
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
-import dynamicIconImports from 'lucide-react/dynamicIconImports'
-import { cn } from '@/utils/cn'
-import { getSocials } from '@/lib/queries/socials'
-import { type LucideProps } from 'lucide-react'
 import { Suspense } from 'react'
+import { cn } from '@/utils/cn'
+import Icon from '@/components/icon'
 
-const Socials = async () => {
-	const socials = await getSocials()
+interface SocialsProps {
+	items: {
+		name: string
+		url: string
+		icon: { metadata: { iconName: string } }
+	}[]
+}
 
-	const Icon = ({ name, ...others }: { name: string } & LucideProps) => {
-		const Component = dynamic(
-			dynamicIconImports[name as keyof typeof dynamicIconImports]
-		)
-		return <Component {...others} />
-	}
-
+const Socials = ({ items }: SocialsProps) => {
 	return (
-		<div className="jus tify-center inline-flex gap-2 md:justify-start">
-			{Object.values(socials).map(({ name, url, icon }) => (
+		<div className="inline-flex justify-center gap-2 md:justify-end">
+			{Object.values(items).map(({ name, url, icon }) => (
 				<Link
-					key={name as string}
-					href={url as string}
+					key={name}
+					href={url}
 					target="_blank"
 					className={cn([
 						'text-accent flex h-8 items-center gap-2 rounded-xl px-2',
@@ -29,9 +25,9 @@ const Socials = async () => {
 						'hover:bg-background-darker hover:text-primary ease-in-out hover:transition-all md:hover:*:flex'
 					])}
 				>
-					<Suspense fallback="">
+					<Suspense>
 						<Icon
-							name={icon?.metadata?.iconName as string}
+							name={icon.metadata.iconName}
 							className="size-5 stroke-2"
 						/>
 					</Suspense>

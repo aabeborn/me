@@ -68,6 +68,134 @@ export type Geopoint = {
 	alt?: number
 }
 
+export type Competence = {
+	_id: string
+	_type: 'competence'
+	_createdAt: string
+	_updatedAt: string
+	_rev: string
+	name?: string
+	icon?: IconManager
+}
+
+export type About = {
+	_id: string
+	_type: 'about'
+	_createdAt: string
+	_updatedAt: string
+	_rev: string
+	name?: string
+	description?: string
+	profile?: {
+		asset?: {
+			_ref: string
+			_type: 'reference'
+			_weak?: boolean
+			[internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+		}
+		hotspot?: SanityImageHotspot
+		crop?: SanityImageCrop
+		_type: 'image'
+	}
+	curriculum?: Array<{
+		company?: string
+		role?: string
+		startDate?: string
+		endDate?: string
+		description?: string
+		logo?: {
+			asset?: {
+				_ref: string
+				_type: 'reference'
+				_weak?: boolean
+				[internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+			}
+			hotspot?: SanityImageHotspot
+			crop?: SanityImageCrop
+			_type: 'image'
+		}
+		url?: string
+		competences?: Array<{
+			name?: string
+			icon?: IconManager
+			_type: 'competence'
+			_key: string
+		}>
+		_type: 'work'
+		_key: string
+	}>
+}
+
+export type SocialRef = {
+	_type: 'reference'
+	_ref: string
+	_weak?: boolean
+}
+
+export type Home = {
+	_id: string
+	_type: 'home'
+	_createdAt: string
+	_updatedAt: string
+	_rev: string
+	title?: string
+	profile?: {
+		asset?: {
+			_ref: string
+			_type: 'reference'
+			_weak?: boolean
+			[internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+		}
+		hotspot?: SanityImageHotspot
+		crop?: SanityImageCrop
+		_type: 'image'
+	}
+	text?: string
+	currentWork?: {
+		_ref: string
+		_type: 'reference'
+		_weak?: boolean
+		[internalGroqTypeReferenceTo]?: 'work'
+	}
+	caption?: string
+	socials?: Array<
+		{
+			_key: string
+		} & SocialRef
+	>
+}
+
+export type Work = {
+	_id: string
+	_type: 'work'
+	_createdAt: string
+	_updatedAt: string
+	_rev: string
+	company?: string
+	role?: string
+	startDate?: string
+	endDate?: string
+	description?: string
+	logo?: {
+		asset?: {
+			_ref: string
+			_type: 'reference'
+			_weak?: boolean
+			[internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+		}
+		hotspot?: SanityImageHotspot
+		crop?: SanityImageCrop
+		_type: 'image'
+	}
+	url?: string
+	competences?: Array<{
+		name?: string
+		icon?: IconManager
+		_type: 'competence'
+		_key: string
+	}>
+}
+
 export type Socials = Array<{
 	name?: string
 	slug?: Slug
@@ -259,6 +387,11 @@ export type AllSanitySchemaTypes =
 	| SanityImageDimensions
 	| SanityFileAsset
 	| Geopoint
+	| Competence
+	| About
+	| SocialRef
+	| Home
+	| Work
 	| Socials
 	| Social
 	| Posts

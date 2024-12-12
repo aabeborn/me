@@ -7,7 +7,7 @@ interface Properties {
 	readonly children: ReactNode
 }
 
-export function ColorSchemaProvider({ children }: Properties) {
+export const ColorSchemaProvider = ({ children }: Properties) => {
 	const [schema, setSchema] = useState<ColorSchema>()
 	return (
 		<div className={schema}>

@@ -5,3 +5,8 @@ export const client: SanityClient = createClient({
 	...sanityEnv,
 	useCdn: false
 })
+
+export const clientClient: SanityClient = createClient({
+	...sanityEnv,
+	useCdn: true
+})

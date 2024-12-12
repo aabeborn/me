@@ -4,6 +4,7 @@ import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemaTypes'
 import { markdownSchema } from 'sanity-plugin-markdown'
 import { IconManager } from 'sanity-plugin-icon-manager'
+import { desk } from './desk/structure'
 
 if (
 	// @ts-ignore - it is correct. Vite injects these values at build time
@@ -23,7 +24,12 @@ export default defineConfig({
 	// @ts-ignore - it is correct. Vite injects these values at build time
 	dataset: import.meta.env.SANITY_STUDIO_DATASET,
 	// @ts-ignore - there is an error about visionTool, something not caused by me
-	plugins: [structureTool(), visionTool(), markdownSchema(), IconManager()],
+	plugins: [
+		structureTool({ structure: desk }),
+		visionTool(),
+		markdownSchema(),
+		IconManager()
+	],
 
 	schema: {
 		types: schemaTypes

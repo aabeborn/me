@@ -1,6 +1,6 @@
 import { HTMLProps } from 'react'
 
-function Logo(properties: HTMLProps<SVGSVGElement>) {
+const Logo = (properties: HTMLProps<SVGSVGElement>) => {
 	return (
 		<svg
 			viewBox="0 0 100 18"

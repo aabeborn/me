@@ -1,3 +1,5 @@
 {
-	"generates": "../../packages/types/sanity.types.ts"
+	"generates": "../../packages/types/sanity.types.ts",
+	"path": "'../ui/src/**/*.{ts,tsx,js,jsx}'",
+	"schema": "../ui/sanity-schemas.json"
 }

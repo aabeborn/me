@@ -5,7 +5,11 @@ const nextConfig: NextConfig = {
 		reactCompiler: true,
 		ppr: true,
 		dynamicIO: true
-	}
+	},
+	images: {
+		domains: ['cdn.sanity.io']
+	},
+	transpilePackages: ['next-mdx-remote']
 }
 
 export default nextConfig
